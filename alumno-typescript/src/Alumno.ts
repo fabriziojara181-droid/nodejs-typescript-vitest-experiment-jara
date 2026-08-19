@@ -1,9 +1,10 @@
-export class Alumno {
+import { Persona } from "./Persona"; 
+export class Alumno extends Persona {
   constructor(
     public nombre: string,
     public edad: number,
   public legajo: number
-  ) {}
+  ) {super(nombre, legajo);} 
 
   esMayorDeEdad(): boolean {
     return this.edad >= 18;
@@ -16,4 +17,4 @@ export class Alumno {
 
     return "Menor de edad";
   }
-}
+}  
